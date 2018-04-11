@@ -1,0 +1,2 @@
+filter:
+ ignores: /addUser,/login,/logout,/static

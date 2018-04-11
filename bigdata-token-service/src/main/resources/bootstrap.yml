@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: token-service
+
+server:
+  port: ${service.server.port:8000}
+  contextPath: /
+
+
+eureka:
+  instance:
+    status-page-url: http://localhost:${server.port}/swagger-ui.html # ${server.port}为该服务的端口号
+#    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: ${eureka.serviceUrl:http://localhost:1111/eureka/}
+

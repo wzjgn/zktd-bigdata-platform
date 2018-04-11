@@ -1,0 +1,30 @@
+spring:
+ redis:
+    host: 127.0.0.1
+
+ data:
+  mongodb:
+   database: bigdata
+   port: 27017
+   host: 127.0.0.1
+
+jwt:
+ accessToken: 6000000
+ refreshToken: 60000000
+ exp: 10
+ secret: 123456
+
+## swagger2
+swagger:
+  enable: true
+  group: content #api 的组信息
+  title: token&用户管理 #标题
+  description: 用户登录注册、token生成、检测、刷新 #描述信息
+  version: v1.10 #版本
+  contact-name: 中科同德 #联系人名称
+  contact-url: http://www.bbb.com #联系人url
+  contact-email: 363701272@qq.com
+  base-package: com.zktd
+  license: Apache License Version 2.0
+  license-url: https://github.com/springfox/springfox/blob/master/LICENSE
+  host: localhost:8511
