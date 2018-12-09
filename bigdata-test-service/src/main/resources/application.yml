@@ -1,0 +1,14 @@
+## swagger2
+swagger:
+  enable: true
+  group: content #api 的组信息
+  title: test& #标题
+  description: 测试 #描述信息
+  version: v1.10 #版本
+  contact-name: 中科同德 #联系人名称
+  contact-url: http://www.bbb.com #联系人url
+  contact-email: 363701272@qq.com
+  base-package: com.zktd
+  license: Apache License Version 2.0
+  license-url: https://github.com/springfox/springfox/blob/master/LICENSE
+  host: localhost:8511

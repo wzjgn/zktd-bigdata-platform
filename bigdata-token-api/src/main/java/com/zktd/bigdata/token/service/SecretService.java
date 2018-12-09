@@ -16,7 +16,6 @@ public interface SecretService {
 
     @ApiOperation(value = "secret", notes = "获取secret")
     public String secret(String userId);
-     
 
 
 }

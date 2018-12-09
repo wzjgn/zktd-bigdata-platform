@@ -70,10 +70,12 @@
 
 
 	<modules>
-		<module>bigdata-api-gateway</module>
+		<!--<module>bigdata-api-gatway</module>-->
 		<module>bigdata-service-discovery</module>
 		<module>bigdata-token-service</module>
 		<module>bigdata-token-api</module>
 		<module>bigdata-common-service</module>
-	</modules>
+		<module>bigdata-api-zuul</module>
+        <module>bigdata-test-service</module>
+    </modules>
 </project>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<script src="/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+<script src="/js/common.js" type="text/javascript"></script>
+<script src="/js/login.js" type="text/javascript"></script>
+<head>
+<title>Insert title here</title>
+</head>
+	<body>
+		 <input type="button" onClick="test();" class="submit-btn" value="访问需要登录的地址，同时刷新token"/>
+	</body>
+</html>
+<script>
+ 
+if(localStorage.getItem('token')==null){
+	window.location="/login.html" 
+};
+</script>
