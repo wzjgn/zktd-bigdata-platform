@@ -1,6 +1,8 @@
 spring:
   application:
     name: token-service
+  zipkin:
+    base-url: http://localhost:8888/
 
 server:
   port: ${service.server.port:8000}
@@ -14,4 +16,3 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${eureka.serviceUrl:http://localhost:1111/eureka/}
-

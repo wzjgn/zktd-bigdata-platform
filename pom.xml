@@ -77,5 +77,6 @@
 		<module>bigdata-common-service</module>
 		<module>bigdata-api-zuul</module>
         <module>bigdata-test-service</module>
+        <module>bigdata-server-zipkin</module>
     </modules>
 </project>

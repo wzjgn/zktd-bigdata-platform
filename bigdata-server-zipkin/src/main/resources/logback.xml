@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <Target>System.out</Target>
+        <encoder>
+            <pattern>%date [%level] [%thread] %logger{80} [%file : %line] %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>../logs/cmp-content-service.log</File>
+        <encoder>
+            <pattern>%date [%level] [%thread] %logger{80} [%file : %line] %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>../logs/cmp-content-service.log.%d{yyyy-MM-dd}</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+    <logger name="com.zktd.bigdata" level="info" additivity="false">
+
+        <appender-ref ref="Console"/>
+
+    </logger>
+    <logger name="org.mongodb" level="debug" additivity="false">
+
+        <appender-ref ref="Console"/>
+
+    </logger>
+
+    <logger name="org.mongodb.driver.cluster" level="ERROR" />
+
+
+    <!--  <logger name="io.netty" level="debug"/> -->
+    <root level="info">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>
+

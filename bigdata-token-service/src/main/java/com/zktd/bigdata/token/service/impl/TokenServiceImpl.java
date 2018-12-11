@@ -46,6 +46,11 @@ public class TokenServiceImpl implements TokenService {
 	public String test(@RequestBody User user){
 
 
+		try {
+			Thread.sleep(1000*3);
+		} catch (Exception e){
+
+		}
 		log.info("test=="+user.toString());
 		return  user.toString();
 	}

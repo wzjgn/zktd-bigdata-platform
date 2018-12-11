@@ -5,8 +5,8 @@ import com.zktd.bigdata.token.entity.User;
 import com.zktd.bigdata.token.service.TokenService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,10 +25,6 @@ public class TestController {
 	private TokenService tokenService;
 
 
-
-
-
-
 	/**
 	 * test
 	 * http://localhost:5555/api-test/testapi/test?username=222
@@ -36,7 +32,7 @@ public class TestController {
 	 * @param response
 	 * @return
 	 */
-	@GetMapping("/test")
+	@RequestMapping(value = "/test", method = RequestMethod.POST)
 	@ResponseBody
 	public ResponseBean test(ServletRequest request, ServletResponse response) {
 		HttpServletRequest httpServletRequest = (HttpServletRequest) request;

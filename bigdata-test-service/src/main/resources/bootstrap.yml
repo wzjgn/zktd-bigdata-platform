@@ -1,12 +1,26 @@
 spring:
   application:
     name: test-service
+  zipkin:
+    base-url: http://localhost:8888/
 
 server:
   port: ${service.server.port:8111}
   contextPath: /
 
-
+#默认feign的hystrix为关闭状态
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
 eureka:
   instance:
     status-page-url: http://localhost:${server.port}/swagger-ui.html # ${server.port}为该服务的端口号
@@ -14,4 +28,3 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${eureka.serviceUrl:http://localhost:1111/eureka/}
-
